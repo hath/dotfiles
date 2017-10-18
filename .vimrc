@@ -57,19 +57,19 @@ filetype plugin indent on
 
 au VimEnter * call s:PluginSetup()
 function! s:PluginSetup()
-	let g:airline_theme = 'molokai'
-	let g:airline_powerline_fonts = 1
-	let g:airline_inactive_collapse = 0
-	let g:airline_skip_empty_sections = 0
-	let g:airline#extensions#ctrlp#show_adjacent_modes = 1
-	let g:airline_detect_modified=1
+  let g:airline_theme = 'molokai'
+  let g:airline_powerline_fonts = 1
+  let g:airline_inactive_collapse = 0
+  let g:airline_skip_empty_sections = 0
+  let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+  let g:airline_detect_modified=1
 
   let g:javascript_plugin_jsdoc = 1
   let g:javascript_plugin_ngdoc = 1
 
   let g:jsx_ext_required = 0
 
-	let g:rainbow_active = 1
+  let g:rainbow_active = 1
 
   let g:syntastic_always_populate_loc_list = 1
   let g:syntastic_auto_loc_list = 1
@@ -78,15 +78,15 @@ function! s:PluginSetup()
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
-	
-	if exists('g:loaded_gitgutter')
-		let g:gitgutter_override_sign_column_highlight = 0
+  
+  if exists('g:loaded_gitgutter')
+    let g:gitgutter_override_sign_column_highlight = 0
 
-		nmap <Leader>gp <Plug>GitGutterPreviewHunk
-		nmap <Leader>gr <Plug>GitGutterUndoHunk:echomsg '\hr is deprecated. Use \hu'<CR>
-		nmap <Leader>gu <Plug>GitGutterUndoHunk
-		nmap <Leader>gs <Plug>GitGutterStageHunk
-	endif
+    nmap <Leader>gp <Plug>GitGutterPreviewHunk
+    nmap <Leader>gr <Plug>GitGutterUndoHunk:echomsg '\hr is deprecated. Use \hu'<CR>
+    nmap <Leader>gu <Plug>GitGutterUndoHunk
+    nmap <Leader>gs <Plug>GitGutterStageHunk
+  endif
 
 endfunction
 
