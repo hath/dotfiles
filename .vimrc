@@ -18,7 +18,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'abra/vim-obsidian'
+Plugin 'baskerville/bubblegum'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-syntastic/syntastic'
@@ -44,7 +44,7 @@ filetype plugin indent on    " required
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just
-:PluginUpdate
+" :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
@@ -77,8 +77,13 @@ function! s:PluginSetup()
   let g:syntastic_check_on_wq = 0
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-
+  " autofix with eslint
+  let g:syntastic_javascript_eslint_args = '--fix'
+  function! SyntasticCheckHook(errors)
+    checktime
+  endfunction
   
+
   if exists('g:loaded_gitgutter')
     let g:gitgutter_override_sign_column_highlight = 0
 
@@ -94,7 +99,7 @@ set history=5000
 set viminfo='1024,<0,s100,f0,r/tmp,r/mnt
 
 " Appearance
-colorscheme obsidian
+colorscheme bubblegum-256-dark
 
 set backspace=indent,eol,start
 set ruler
@@ -110,7 +115,7 @@ set noignorecase
 set splitright
 
 " no swap
-set noswapfile
+" set noswapfile
 
 " autoread
 set autoread
