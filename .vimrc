@@ -56,6 +56,11 @@ filetype on
 filetype plugin indent on
 
 au VimEnter * call s:PluginSetup()
+
+map <C-c> "+y
+map <C-x> "*y
+map <C-S-v> "+p
+
 function! s:PluginSetup()
   let g:airline_theme = 'molokai'
   let g:airline_powerline_fonts = 1
@@ -78,11 +83,7 @@ function! s:PluginSetup()
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
   " autofix with eslint
-  let g:syntastic_javascript_eslint_args = '--fix'
-  function! SyntasticCheckHook(errors)
-    checktime
-  endfunction
-  
+  let g:syntastic_javascript_eslint_args = ''
 
   if exists('g:loaded_gitgutter')
     let g:gitgutter_override_sign_column_highlight = 0
@@ -115,7 +116,7 @@ set noignorecase
 set splitright
 
 " no swap
-" set noswapfile
+set noswapfile
 
 " autoread
 set autoread
