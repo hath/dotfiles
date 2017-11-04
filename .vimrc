@@ -18,7 +18,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'baskerville/bubblegum'
+" Plugin 'baskerville/bubblegum'
+Plugin 'oshdick/onedark.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'vim-syntastic/syntastic'
@@ -62,7 +63,7 @@ map <C-x> "*y
 map <C-S-v> "+p
 
 function! s:PluginSetup()
-  let g:airline_theme = 'molokai'
+  let g:airline_theme = 'onedark'
   let g:airline_powerline_fonts = 1
   let g:airline_inactive_collapse = 0
   let g:airline_skip_empty_sections = 0
@@ -100,7 +101,7 @@ set history=5000
 set viminfo='1024,<0,s100,f0,r/tmp,r/mnt
 
 " Appearance
-colorscheme bubblegum-256-dark
+colorscheme onedark
 
 set backspace=indent,eol,start
 set ruler

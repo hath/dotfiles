@@ -13,4 +13,4 @@
 	email = hathaway.bg@gmail.com
 	name = Brandon Hathaway
 [core]
-	autocrlf = true
+	autocrlf = false
