@@ -6,7 +6,7 @@
 	ci = commit
 	st = status
 	br = branch
-	log = log --graph --oneline --decorate --all
+	l = log --graph --oneline --decorate --all
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 [user]
