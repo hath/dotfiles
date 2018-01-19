@@ -58,6 +58,8 @@ filetype plugin indent on
 
 au VimEnter * call s:PluginSetup()
 
+nnoremap <c-q> <c-v>
+
 map <C-c> "+y
 map <C-x> "*y
 map <C-S-v> "+p

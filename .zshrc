@@ -14,5 +14,8 @@ plugins=(
   git
 )
 
+# unmap ctrl q from terminal start so I can use it as visual block mode in vim
+stty start undef
+
 source $ZSH/oh-my-zsh.sh
 
