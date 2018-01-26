@@ -16,3 +16,6 @@
 	autocrlf = false
 [merge]
 	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
