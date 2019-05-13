@@ -9,11 +9,14 @@
 	l = log --graph --oneline --decorate --all
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
+  pushup = !git push --set-upstream origin `git symbolic-ref --short HEAD`
+  merge = git merge --no-ff
 [user]
 	email = hathaway.bg@gmail.com
 	name = Brandon Hathaway
 [core]
 	autocrlf = false
+	excludesfile = /home/hath/.gitignore_global
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
